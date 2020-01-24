@@ -1,0 +1,15 @@
+<mat-card color="primary"><mat-icon>home</mat-icon>All server recipe</mat-card>
+<div>
+  <mat-list>
+    <mat-card class="grecipe"><mat-list-item [class.selected]="r === selectedRecipe" *ngFor="let r of recipes | async | select:'full'">
+      <mat-icon color="warn" (click)="OnDelete(r._id)" matListIcon>delete</mat-icon>
+      <h3 matLine><button mat-raised-button color="primary" (click)="OnSelect(r)" >{{r.title}}</button> </h3>
+      <p matLine>
+        <span> {{r.description}} </span>
+        <span> -- {{r.ingredients}} </span>
+      </p>
+    </mat-list-item></mat-card>
+  </mat-list>
+  <app-recipe-detail [recipe]="selectedRecipe"></app-recipe-detail>
+</div>
+/*Lorem*/

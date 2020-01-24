@@ -1,0 +1,41 @@
+main{
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  background: bisque;
+}
+.addRecipe{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.addRecipeField {
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.mock-items{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.items{
+  display: flex;
+  flex-direction: row;
+  color: #eee;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+  width: 10%;
+  margin: 3px;
+  background: #3f51b5;
+  text-align: center;
+  padding-top: 50px;
+}
+.grecipe{
+  margin-top: 20px;
+}

@@ -1,0 +1,24 @@
+<h2>Top Recipes</h2>
+<div fxLayout="row wrap" fxLayoutAlign="flex-start" *ngFor="let item of allitem" class="mock-items">
+  <div class="items">{{item.name}}</div>
+</div>
+<mat-card fxLayoutAlign="center"><h2>Create server recipe</h2></mat-card>
+<form [formGroup]="form" class="addRecipe">
+  <mat-form-field class="addRecipeField">
+    <label>
+      <input matInput type="text" placeholder="Title" formControlName="title" required>
+    </label>
+  </mat-form-field>
+  <mat-form-field class="addRecipeField">
+    <label>
+      <input matInput type="text" placeholder="Description" formControlName="title" required>
+    </label>
+  </mat-form-field>
+  <mat-form-field class="addRecipeField">
+    <label>
+      <input matInput type="text" placeholder="Ingredients" formControlName="ingredients" required>
+    </label>
+  </mat-form-field>
+  <button mat-raised-button [disabled]="form.invalid">Add recipe</button>
+</form>
+

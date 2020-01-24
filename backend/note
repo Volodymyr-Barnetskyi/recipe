@@ -1,0 +1,33 @@
+nest config
+
+docker-compose
+     - mongo
+     - nodejs
+
+
+lodash
+
+-----
+  many to many
+
+
+
+  server.get(  '/', ( req, res, next ) => {
+
+  }    )
+
+---
+
+Graphql
+
+material angular
+
+table
+modal
+layout
+reactive form
+
+rxjs - switchmap, combineLatest (map, timeout)
+
+-- recipe -> steps, ingredients(the other collection)
+

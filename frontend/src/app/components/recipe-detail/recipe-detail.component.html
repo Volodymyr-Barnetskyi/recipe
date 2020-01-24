@@ -1,0 +1,9 @@
+<div *ngFor="let r of res$ | async">
+  <h2>Detail {{r.title}}</h2>
+  <div>Description: {{r.description}}
+    <label>
+      Name: <input matInput type="text" [(ngModel)]="r.title">
+      <button (click)="goBack()">ComeBack</button>
+    </label>
+  </div>
+</div>

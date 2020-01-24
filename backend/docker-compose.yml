@@ -1,0 +1,19 @@
+version: "3.3"
+services:
+
+  server:
+    container_name: nest4
+    hostname: localhost
+    build: ./
+    ports:
+      - "3000:3000"
+  mongo:
+    image: mongo
+    enviropment:
+      gggg
+
+
+networks:
+  ccc:
+
+
