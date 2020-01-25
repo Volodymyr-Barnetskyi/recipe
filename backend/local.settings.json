@@ -1,7 +1,14 @@
 {
   "IsEncrypted": false,
   "Values": {
-    "AzureWebJobsStorage": "",
-    "FUNCTIONS_WORKER_RUNTIME": "node"
-  }
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=recipesalfa;AccountKey=sV8dUEiukt0+Vlr6docoFxg5Tm2arCkymFXFy5cYHU0YovkiNKQR+kubc8U13QsCaBoem4wESAJ7Nlj162+GJQ==;EndpointSuffix=core.windows.net",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "FUNCTIONS_EXTENSION_VERSION": "~2",
+    "WEBSITE_NODE_DEFAULT_VERSION": "~10",
+    "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING": "DefaultEndpointsProtocol=https;AccountName=recipesalfa;AccountKey=sV8dUEiukt0+Vlr6docoFxg5Tm2arCkymFXFy5cYHU0YovkiNKQR+kubc8U13QsCaBoem4wESAJ7Nlj162+GJQ==;EndpointSuffix=core.windows.net",
+    "WEBSITE_CONTENTSHARE": "recipes-alfaccd07d",
+    "WEBSITE_RUN_FROM_PACKAGE": "1",
+    "APPINSIGHTS_INSTRUMENTATIONKEY": "e6efb6de-2f62-4c7f-b86f-f4dbe0800da1"
+  },
+  "ConnectionStrings": {}
 }
