@@ -11,7 +11,7 @@
   </mat-form-field>
   <mat-form-field class="addRecipeField">
     <label>
-      <input matInput type="text" placeholder="Description" formControlName="title" required>
+      <input matInput type="text" placeholder="Description" formControlName="description" required>
     </label>
   </mat-form-field>
   <mat-form-field class="addRecipeField">
@@ -19,6 +19,6 @@
       <input matInput type="text" placeholder="Ingredients" formControlName="ingredients" required>
     </label>
   </mat-form-field>
-  <button mat-raised-button [disabled]="form.invalid">Add recipe</button>
+  <button mat-raised-button [disabled]="form.invalid" (click)="onSubmit()">Add recipe</button>
 </form>
 
