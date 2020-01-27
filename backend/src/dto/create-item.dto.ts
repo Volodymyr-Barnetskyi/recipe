@@ -1,4 +1,4 @@
-import { Field, ID, InputType, ObjectType } from 'type-graphql';
+import { Field, ID, ObjectType } from 'type-graphql';
 @ObjectType()
 export class ItemObject {
   @Field(() => ID)
@@ -7,6 +7,6 @@ export class ItemObject {
   readonly title: string;
   @Field()
   readonly description: string;
-  @Field(type => [String])
+  @Field(() => [String])
   readonly ingredients: string[];
 }

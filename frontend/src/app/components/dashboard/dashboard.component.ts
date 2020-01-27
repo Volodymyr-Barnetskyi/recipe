@@ -10,17 +10,20 @@ import {createGQL} from '../../services/createGQL.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  constructor(private recipeService: RecipeService, private creatrgql: createGQL) { }
+  @Input() title;
+  @Input() desciption;
+  @Input() ingredients;
+  constructor(public recipeService: RecipeService, public creategql: createGQL) { }
   form: FormGroup;
   allitem = Recipes;
   ngOnInit() { this.form  = new FormGroup({
-    title: new FormControl(null, [Validators.required, Validators.maxLength(3)]),
-    description: new FormControl(null, [Validators.required, Validators.maxLength(3)]),
-    ingredients: new FormControl(null, [Validators.required, Validators.maxLength(3)])
+    title: new FormControl(null, [Validators.required, Validators.minLength(3)]),
+    description: new FormControl(null, [Validators.required, Validators.minLength(3)]),
+    ingredients: new FormControl(null, [Validators.required, Validators.minLength(3)])
   });
   }
   onSubmit() {
-    this.creatrgql.mutate({
+    this.creategql.mutate({
       title: this.form.value.title,
       description: this.form.value.description,
       ingredients: this.form.value.ingredients

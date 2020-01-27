@@ -5,12 +5,16 @@ import gql from 'graphql-tag';
 @Injectable({
   providedIn: 'root',
 })
+// tslint:disable-next-line:class-name
 export class createGQL extends Mutation {
   document = gql`
-    mutation upvotePost($postId: Int!) {
-      upvotePost(postId: $postId) {
-        id
-        votes
+    mutation create{
+      create(input:
+      {title: $title, description: $description, ingredients: $ingredients}) {
+        id,
+        title,
+        description,
+        ingredients
       }
     }
   `;

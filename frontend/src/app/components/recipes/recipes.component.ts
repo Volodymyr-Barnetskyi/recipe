@@ -32,14 +32,6 @@ export class RecipesComponent implements OnInit {
       }
       `
     }).valueChanges;
-    // this.create = this.apollo.mutate({
-    //   mutation: gql`
-    //   mutation create{
-
-    //   }
-
-    //   `
-    // });
    // this.res$ = this.recipeService.getItem();
     /*this.recipes$ = this.recipeService.getRecipes();*/
   }

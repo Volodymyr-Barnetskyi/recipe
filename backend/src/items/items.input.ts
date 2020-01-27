@@ -6,6 +6,6 @@ export class ItemInput {
   readonly title: string;
   @Field()
   readonly description: string;
-  @Field(type => [String])
+  @Field(() => [String])
   readonly ingredients: string[];
 }

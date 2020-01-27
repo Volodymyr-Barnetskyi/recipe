@@ -18,10 +18,10 @@ export class ItemsResolver {
   }
   @Mutation(() => ItemObject)
   async updateItem(@Args('id') id: string, @Args('input') input: ItemInput) {
-    return this.itemService.update(id, input);
+    return await this.itemService.update(id, input);
   }
   @Mutation(() => ItemObject)
   async deleteItem(@Args('id') id: string) {
-    return this.itemService.delete(id);
+    return await this.itemService.delete(id);
   }
 }
