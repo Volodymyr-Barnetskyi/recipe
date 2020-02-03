@@ -11,7 +11,7 @@ import {createGQL} from '../../services/createGQL.service';
 })
 export class DashboardComponent implements OnInit {
   @Input() title;
-  @Input() desciption;
+  @Input() description;
   @Input() ingredients;
   constructor(public recipeService: RecipeService, public creategql: createGQL) { }
   form: FormGroup;
@@ -27,7 +27,6 @@ export class DashboardComponent implements OnInit {
       title: this.form.value.title,
       description: this.form.value.description,
       ingredients: this.form.value.ingredients
-    });
+    }).subscribe();
   }
-
 }

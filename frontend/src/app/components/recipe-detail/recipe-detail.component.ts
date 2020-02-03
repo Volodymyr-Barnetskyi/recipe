@@ -1,8 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Recipe} from "../../recipe";
-import {Location} from "@angular/common";
-import {ActivatedRoute} from "@angular/router";
-import {RecipeService} from "../../services/recipe.service";
+import {Recipe} from '../../recipe';
+import {Location} from '@angular/common';
+import {ActivatedRoute} from '@angular/router';
+import {RecipeService} from '../../services/recipe.service';
 
 @Component({
   selector: 'app-recipe-detail',
@@ -13,12 +13,12 @@ export class RecipeDetailComponent implements OnInit {
   @Input() recipe: Recipe;
   public res$;
   ngOnInit() {
-   this.res$ = this.recipeService.getItem();
+   // this.res$ = this.recipeService.getItem();
   }
   constructor(
-    private location:Location,
-    private route:ActivatedRoute,
-    private recipeService:RecipeService) { }
+    private location: Location,
+    private route: ActivatedRoute,
+    private recipeService: RecipeService) { }
 
 
   goBack(): void {

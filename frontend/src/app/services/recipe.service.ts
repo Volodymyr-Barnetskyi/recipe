@@ -18,9 +18,9 @@ export class RecipeService {
       })
   };
     url = `${environment.apikey}/items`;
-   getItem(): Observable<any> {
-  return this.http.get(this.url, this.httpOptions);
-    }
+  //  getItem(): Observable<any> {
+  // return this.http.get(this.url, this.httpOptions);
+  //   }
 
     deleteHero(id: string): Observable<{}> {
     const url = `${this.url}/${id}`;

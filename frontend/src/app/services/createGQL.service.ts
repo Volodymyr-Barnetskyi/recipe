@@ -8,7 +8,7 @@ import gql from 'graphql-tag';
 // tslint:disable-next-line:class-name
 export class createGQL extends Mutation {
   document = gql`
-    mutation create{
+    mutation create($title: String!, $description: String!, $ingredients: [String!]!){
       create(input:
       {title: $title, description: $description, ingredients: $ingredients}) {
         id,
