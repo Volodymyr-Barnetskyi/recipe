@@ -2,7 +2,7 @@
 <div>
   <mat-list>
     <mat-card class="grecipe"><mat-list-item [class.selected]="r === selectedRecipe" *ngFor="let r of recipes | async | select:'full'">
-      <mat-icon color="warn" (click)="OnDelete(r._id)" matListIcon>delete</mat-icon>
+      <mat-icon color="warn" (click)="OnDelete(r.id)" matListIcon>delete</mat-icon>
       <h3 matLine><button mat-raised-button color="primary" (click)="OnSelect(r)" >{{r.title}}</button> </h3>
       <p matLine>
         <span> {{r.description}} </span>

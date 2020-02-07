@@ -1,10 +1,10 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Recipe} from '../../recipe';
 import {RecipeService} from '../../services/recipe.service';
-import {Observable} from 'rxjs';
 import {Apollo, Query} from 'apollo-angular';
 import gql from 'graphql-tag';
 import { ItemObject } from 'src/app/types';
+import {deleteGQL} from '../../services/deleteGQL.service';
 @Component({
   selector: 'app-recipes',
   templateUrl: './recipes.component.html',
@@ -14,10 +14,10 @@ export class RecipesComponent implements OnInit {
   public recipes: any;
   public selectedRecipe;
   public res$: any;
-  public del: any;
   public create: any;
+  @Input() id: string;
   constructor(
-    private recipeService: RecipeService, public apollo: Apollo) {}
+    private recipeService: RecipeService, public apollo: Apollo, public deleteGQL: deleteGQL) {}
 
   ngOnInit() {
     this.recipes = this.apollo.watchQuery({
@@ -38,7 +38,9 @@ export class RecipesComponent implements OnInit {
   OnSelect(item: Recipe) {
     this.selectedRecipe = item;
   }
-  OnDelete(index) {
-    this.del = this.recipeService.deleteHero(index).subscribe();
+  OnDelete(index: string) {
+    this.deleteGQL.mutate({
+      id: index
+    }).subscribe();
   }
 }

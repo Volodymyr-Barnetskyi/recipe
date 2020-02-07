@@ -1,6 +1,6 @@
 <h2>Top Recipes</h2>
 <div fxLayout="row wrap" fxLayoutAlign="center" *ngFor="let item of allitem" class="mock-items">
-  <div fxLayoutAlign="center" class="items">{{item.name}}</div>
+  <div fxLayoutAlign="center" class="items animated pulse infinite">{{item.name}}</div>
 </div>
 <mat-card fxLayoutAlign="center"><h2>Create server recipe</h2></mat-card>
 <form [formGroup]="form" class="addRecipe">

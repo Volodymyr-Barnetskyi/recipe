@@ -18,6 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatListModule} from '@angular/material/list';
 import { GraphQLModule } from './graphql.module';
 import {FlexModule} from '@angular/flex-layout';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from './reducers';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +43,14 @@ import {FlexModule} from '@angular/flex-layout';
         MatListModule,
         ReactiveFormsModule,
         GraphQLModule,
-        FlexModule
+        FlexModule,
+        StoreModule.forRoot(reducers, {
+      metaReducers,
+      runtimeChecks: {
+        strictStateImmutability: true,
+        strictActionImmutability: true
+      }
+    })
     ],
   providers: [],
   bootstrap: [AppComponent]
